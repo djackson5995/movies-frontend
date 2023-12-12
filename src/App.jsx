@@ -3,15 +3,17 @@ import Header from "./components/Header/Header";
 import MovieList from "./components/MovieList/MovieList";
 import MovieInfo from "./components/MovieInfo/MovieInfo";
 function App() {
+  const selectedMovie = {
+    title: "Forrest Gump",
+    runningTime: 142,
+    genre: "Romantic Genre",
+  };
+
   return (
     <div className="App">
       <Header />
       <MovieList />
-      <MovieInfo
-        title="Forrest Gump"
-        runningTime={142}
-        genre="Romantic Genre"
-      />
+      <MovieInfo movieObj={selectedMovie} />
     </div>
   );
 }
